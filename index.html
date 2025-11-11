@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ChemiVibes.com – Premium Domain for Sale</title>
-  <meta name="description" content="ChemiVibes.com is a premium, memorable domain that expresses human chemistry, connection, and positive vibes. Ideal for lifestyle, social, or creative brands.">
-  <meta name="keywords" content="ChemiVibes, domain for sale, premium domain, brand name, vibes, chemistry, connection, relationships, lifestyle, creative brand">
+  <meta name="description" content="ChemiVibes.com — a rare, premium domain inspired by chemistry, energy, and human connection. Perfect for brands that spark emotion and creativity.">
+  <meta name="keywords" content="ChemiVibes, premium domain, domain for sale, vibes, connection, relationships, creativity, brand name, invest domain">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -33,36 +33,41 @@
     .circle {
       position: absolute;
       border-radius: 50%;
-      background: rgba(77, 208, 255, 0.1);
+      background: rgba(77, 208, 255, 0.08);
       animation: float 15s linear infinite;
     }
 
-    .circle:nth-child(1) {
-      width: 300px;
-      height: 300px;
-      top: 10%;
-      left: 15%;
-      animation-delay: 0s;
-    }
-    .circle:nth-child(2) {
-      width: 400px;
-      height: 400px;
-      bottom: 15%;
-      right: 20%;
-      animation-delay: 4s;
-    }
-    .circle:nth-child(3) {
-      width: 250px;
-      height: 250px;
-      top: 40%;
-      right: 40%;
-      animation-delay: 8s;
-    }
+    .circle:nth-child(1) { width: 300px; height: 300px; top: 10%; left: 15%; animation-delay: 0s; }
+    .circle:nth-child(2) { width: 400px; height: 400px; bottom: 15%; right: 20%; animation-delay: 4s; }
+    .circle:nth-child(3) { width: 250px; height: 250px; top: 40%; right: 40%; animation-delay: 8s; }
 
     @keyframes float {
       0% { transform: scale(1) translateY(0) rotate(0deg); opacity: 0.4; }
       50% { transform: scale(1.1) translateY(-20px) rotate(180deg); opacity: 0.7; }
       100% { transform: scale(1) translateY(0) rotate(360deg); opacity: 0.4; }
+    }
+
+    /* الشرارة */
+    .spark {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,255,255,0.9), rgba(77,208,255,0.1) 70%);
+      transform: translate(-50%, -50%) scale(0);
+      opacity: 0;
+      z-index: 2;
+      pointer-events: none;
+      animation: none;
+    }
+
+    @keyframes sparkAnim {
+      0% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+      20% { transform: translate(-50%, -50%) scale(1.5); opacity: 1; }
+      60% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.8; }
+      100% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
     }
 
     .container {
@@ -77,24 +82,17 @@
     }
 
     .logo {
-      font-size: 1.6em;
-      font-weight: bold;
+      font-size: 2em;
+      font-weight: 700;
       color: #4dd0ff;
       letter-spacing: 1px;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
 
     h1 {
-      font-size: 2em;
+      font-size: 1.8em;
       color: #ffffff;
-      margin-bottom: 5px;
-    }
-
-    .tagline {
-      font-size: 1.05em;
-      font-style: italic;
-      color: #a8d8ff;
-      margin-bottom: 18px;
+      margin-bottom: 15px;
     }
 
     p {
@@ -105,14 +103,14 @@
     }
 
     .buttons {
-      margin-top: 25px;
+      margin-top: 30px;
     }
 
     .btn {
       display: inline-block;
       background: #4dd0ff;
       color: #0a0f1f;
-      padding: 12px 22px;
+      padding: 12px 24px;
       border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
@@ -134,19 +132,25 @@
 </head>
 <body>
 
-  <!-- خلفية متحركة -->
+  <!-- الخلفية -->
   <div class="background">
     <div class="circle"></div>
     <div class="circle"></div>
     <div class="circle"></div>
   </div>
 
+  <!-- تأثير الشرارة -->
+  <div class="spark" id="spark"></div>
+
   <div class="container">
     <div class="logo">✨ ChemiVibes</div>
-    <h1>Feel the Connection</h1>
-    <div class="tagline">Where vibes meet connection.</div>
-    <p><strong>ChemiVibes.com</strong> captures the energy of human chemistry — that instant spark, connection, and flow between people.  
-    It's perfect for lifestyle, dating, social, or creative projects that celebrate vibes and real connection.</p>
+
+    <h1>Where Energy Meets Connection</h1>
+    <p>
+      A name that speaks the language of connection — subtle, modern, and full of life.  
+      Perfect for brands or projects that celebrate human energy, creative chemistry, and authentic vibes.  
+      Own it today and make your brand unforgettable.
+    </p>
 
     <div class="buttons">
       <a href="https://www.afternic.com/forsale/chemivibes.com" class="btn" target="_blank">Buy on Afternic</a>
@@ -156,18 +160,18 @@
     <footer>© 2025 ChemiVibes.com — Premium Domain for Sale</footer>
   </div>
 
-  <!-- مؤثر صوتي خفيف عند التحميل -->
+  <!-- الصوت -->
   <audio id="vibeSound" preload="auto">
     <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_6fbc2a519e.mp3?filename=spark-electric-98361.mp3" type="audio/mpeg">
   </audio>
+
   <script>
     window.addEventListener('load', () => {
       const sound = document.getElementById('vibeSound');
-      sound.volume = 0.15; // خافت جدًا
-      sound.play().catch(() => {
-        // بعض المتصفحات تحتاج تفاعل المستخدم أولاً
-        console.log("Sound will play after first click.");
-      });
+      const spark = document.getElementById('spark');
+      sound.volume = 0.15;
+      sound.play().catch(() => console.log("Sound will play after user interaction."));
+      spark.style.animation = 'sparkAnim 1.2s ease-out';
     });
   </script>
 
