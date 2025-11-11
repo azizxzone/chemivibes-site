@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ChemiVibes.com – Premium Domain for Sale</title>
-  <meta name="description" content="ChemiVibes.com is a premium, memorable domain name that expresses human chemistry, connection, and positive vibes. Ideal for lifestyle, social, or creative brands.">
+  <meta name="description" content="ChemiVibes.com is a premium, memorable domain that expresses human chemistry, connection, and positive vibes. Ideal for lifestyle, social, or creative brands.">
   <meta name="keywords" content="ChemiVibes, domain for sale, premium domain, brand name, vibes, chemistry, connection, relationships, lifestyle, creative brand">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -21,7 +21,7 @@
       overflow: hidden;
     }
 
-    /* الخلفية المتحركة */
+    /* خلفية متحركة ناعمة */
     .background {
       position: absolute;
       width: 100%;
@@ -134,7 +134,7 @@
 </head>
 <body>
 
-  <!-- خلفية الموجات -->
+  <!-- خلفية متحركة -->
   <div class="background">
     <div class="circle"></div>
     <div class="circle"></div>
@@ -155,6 +155,21 @@
 
     <footer>© 2025 ChemiVibes.com — Premium Domain for Sale</footer>
   </div>
+
+  <!-- مؤثر صوتي خفيف عند التحميل -->
+  <audio id="vibeSound" preload="auto">
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_6fbc2a519e.mp3?filename=spark-electric-98361.mp3" type="audio/mpeg">
+  </audio>
+  <script>
+    window.addEventListener('load', () => {
+      const sound = document.getElementById('vibeSound');
+      sound.volume = 0.15; // خافت جدًا
+      sound.play().catch(() => {
+        // بعض المتصفحات تحتاج تفاعل المستخدم أولاً
+        console.log("Sound will play after first click.");
+      });
+    });
+  </script>
 
 </body>
 </html>
