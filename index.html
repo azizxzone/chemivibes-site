@@ -31,12 +31,39 @@
       border-radius: 16px;
       box-shadow: 0 0 25px rgba(0,0,0,0.4);
       text-align: center;
+      border-top: 2px solid rgba(255,255,255,0.3);
+      border-bottom: 2px solid rgba(255,255,255,0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* الشرارة */
+    .sparkle {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: #4dd0ff;
+      border-radius: 50%;
+      animation: sparkle 1.5s infinite;
+      top: 20%;
+      left: 30%;
+      opacity: 0.8;
+    }
+
+    .sparkle:nth-child(2) { top: 50%; left: 70%; animation-delay: 0.5s; }
+    .sparkle:nth-child(3) { top: 75%; left: 40%; animation-delay: 1s; }
+
+    @keyframes sparkle {
+      0%, 100% { transform: scale(0.6); opacity: 0.7; }
+      50% { transform: scale(1.5); opacity: 1; }
     }
 
     h1 {
       font-size: 1.8em;
       color: #ffffff;
       margin: 15px 0;
+      position: relative;
+      z-index: 2; /* فوق الشرارة */
     }
 
     p {
@@ -44,10 +71,14 @@
       font-size: 1.05em;
       line-height: 1.6;
       color: #e6e6e6;
+      position: relative;
+      z-index: 2;
     }
 
     .buttons {
       margin-top: 30px;
+      position: relative;
+      z-index: 2;
     }
 
     .btn {
@@ -70,18 +101,27 @@
       margin-top: 25px;
       font-size: 0.85em;
       color: #aaa;
+      position: relative;
+      z-index: 2;
     }
 
     .logo-svg {
       width: 200px;
       height: auto;
       margin-bottom: 15px;
+      position: relative;
+      z-index: 2;
     }
+
   </style>
 </head>
 <body>
 
   <div class="container">
+    <!-- الشرارات -->
+    <div class="sparkle"></div>
+    <div class="sparkle"></div>
+    <div class="sparkle"></div>
 
     <!-- شعار SVG -->
     <svg class="logo-svg" viewBox="0 0 400 80" xmlns="http://www.w3.org/2000/svg">
