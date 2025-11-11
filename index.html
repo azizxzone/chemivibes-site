@@ -8,18 +8,66 @@
   <meta name="keywords" content="ChemiVibes, domain for sale, premium domain, brand name, vibes, chemistry, connection, relationships, lifestyle, creative brand">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
       font-family: 'Poppins', Arial, sans-serif;
-      background: linear-gradient(135deg, #0b0e1d, #1a1f3c);
+      background: radial-gradient(circle at bottom right, #0b0e1d 10%, #1a1f3c 70%);
       color: white;
       display: flex;
       align-items: center;
       justify-content: center;
       height: 100vh;
       text-align: center;
-      padding: 20px;
+      overflow: hidden;
     }
+
+    /* الخلفية المتحركة */
+    .background {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(77, 208, 255, 0.1);
+      animation: float 15s linear infinite;
+    }
+
+    .circle:nth-child(1) {
+      width: 300px;
+      height: 300px;
+      top: 10%;
+      left: 15%;
+      animation-delay: 0s;
+    }
+    .circle:nth-child(2) {
+      width: 400px;
+      height: 400px;
+      bottom: 15%;
+      right: 20%;
+      animation-delay: 4s;
+    }
+    .circle:nth-child(3) {
+      width: 250px;
+      height: 250px;
+      top: 40%;
+      right: 40%;
+      animation-delay: 8s;
+    }
+
+    @keyframes float {
+      0% { transform: scale(1) translateY(0) rotate(0deg); opacity: 0.4; }
+      50% { transform: scale(1.1) translateY(-20px) rotate(180deg); opacity: 0.7; }
+      100% { transform: scale(1) translateY(0) rotate(360deg); opacity: 0.4; }
+    }
+
     .container {
+      position: relative;
+      z-index: 1;
       background: rgba(255, 255, 255, 0.07);
       border-radius: 16px;
       padding: 45px 35px;
@@ -27,6 +75,7 @@
       box-shadow: 0 0 25px rgba(0,0,0,0.4);
       backdrop-filter: blur(6px);
     }
+
     .logo {
       font-size: 1.6em;
       font-weight: bold;
@@ -34,26 +83,31 @@
       letter-spacing: 1px;
       margin-bottom: 10px;
     }
+
     h1 {
       font-size: 2em;
       color: #ffffff;
       margin-bottom: 5px;
     }
+
     .tagline {
       font-size: 1.05em;
       font-style: italic;
       color: #a8d8ff;
       margin-bottom: 18px;
     }
+
     p {
       margin-top: 12px;
       font-size: 1.05em;
       line-height: 1.6;
       color: #e6e6e6;
     }
+
     .buttons {
       margin-top: 25px;
     }
+
     .btn {
       display: inline-block;
       background: #4dd0ff;
@@ -65,10 +119,12 @@
       margin: 5px;
       transition: 0.3s;
     }
+
     .btn:hover {
       background: #3bc8ff;
       transform: scale(1.05);
     }
+
     footer {
       margin-top: 25px;
       font-size: 0.85em;
@@ -77,6 +133,13 @@
   </style>
 </head>
 <body>
+
+  <!-- خلفية الموجات -->
+  <div class="background">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </div>
 
   <div class="container">
     <div class="logo">✨ ChemiVibes</div>
