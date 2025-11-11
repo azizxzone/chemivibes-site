@@ -81,18 +81,10 @@
       backdrop-filter: blur(6px);
     }
 
-    .logo {
-      font-size: 2em;
-      font-weight: 700;
-      color: #4dd0ff;
-      letter-spacing: 1px;
-      margin-bottom: 15px;
-    }
-
     h1 {
       font-size: 1.8em;
       color: #ffffff;
-      margin-bottom: 15px;
+      margin: 15px 0;
     }
 
     p {
@@ -128,6 +120,13 @@
       font-size: 0.85em;
       color: #aaa;
     }
+
+    /* شعار SVG */
+    .logo-svg {
+      width: 200px;
+      height: auto;
+      margin-bottom: 15px;
+    }
   </style>
 </head>
 <body>
@@ -143,7 +142,24 @@
   <div class="spark" id="spark"></div>
 
   <div class="container">
-    <div class="logo">✨ ChemiVibes</div>
+
+    <!-- شعار SVG -->
+    <svg class="logo-svg" viewBox="0 0 400 80" xmlns="http://www.w3.org/2000/svg">
+      <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
+        font-family="Poppins, Arial, sans-serif"
+        font-size="48"
+        font-weight="700"
+        fill="url(#gradient)"
+        letter-spacing="2">
+        ChemiVibes
+      </text>
+      <defs>
+        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#4dd0ff"/>
+          <stop offset="100%" stop-color="#ffffff"/>
+        </linearGradient>
+      </defs>
+    </svg>
 
     <h1>Where Energy Meets Connection</h1>
     <p>
